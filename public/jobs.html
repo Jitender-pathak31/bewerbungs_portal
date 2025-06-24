@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Jobs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Job Portal</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="users.html">Users</a></li>
+                <li class="nav-item"><a class="nav-link" href="companies.html">Companies</a></li>
+                <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
+                <li class="nav-item"><a class="nav-link" href="applications.html">Applications</a></li>
+                <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mt-4">
+    <h2>Manage Job</h2>
+    <form id="jobForm" class="mb-4">
+        <input type="hidden" id="job_id">
+        <div class="mb-3">
+            <label for="title" class="form-label">Job Title</label>
+            <input type="text" class="form-control" id="title" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="company_id" class="form-label">Company ID</label>
+            <input type="number" class="form-control" id="company_id">
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="location">
+        </div>
+        <div class="mb-3">
+            <label for="salary" class="form-label">Salary</label>
+            <input type="text" class="form-control" id="salary">
+        </div>
+        <div class="mb-3">
+            <label for="posted_date" class="form-label">Posted Date</label>
+            <input type="date" class="form-control" id="posted_date">
+        </div>
+        <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            <select class="form-control" id="status" required>
+                <option value="Open">Open</option>
+                <option value="Closed">Closed</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="recruiter_id" class="form-label">Recruiter ID</label>
+            <input type="number" class="form-control" id="recruiter_id">
+        </div>
+        <button type="submit" class="btn btn-primary">Save Job</button>
+    </form>
+    <h3>Job List</h3>
+    <table class="table table-striped" id="jobTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Company ID</th>
+            <th>Location</th>
+            <th>Salary</th>
+            <th>Posted Date</th>
+            <th>Status</th>
+            <th>Recruiter ID</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
